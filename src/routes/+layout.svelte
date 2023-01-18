@@ -1,53 +1,40 @@
 <script>
-	import Header from './Header.svelte';
-	import './styles.css';
+	import { page } from '$app/stores'
+	import "../app.css"
 </script>
 
-<div class="app">
-	<Header />
-
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+<nav class="flex justify-between max-w-7xl my-0 mx-auto py-4 text-white px-4 ">
+	<div class="logo">
+		<h1>CHdev</h1>
+	</div>
+	<ul class="flex gap-4">
+		<li>
+			<a class=" p-1.5 rounded-sm ease-in duration-300 hover:bg-[#434343] {$page.url.pathname == '/' ? 'selected' : ''} " href="/">Home</a>
+		</li>
+		<li>
+			<a class=" hover:bg-[#434343] p-1.5 rounded-sm ease-in duration-300 {$page.url.pathname == '/projects' ? 'selected' : ''}  " href="/projects">Projetos</a>
+		</li>
+		<li>
+			<a class="{$page.url.pathname == '/about' ? 'active:bg-[#434343]' : ''} hover:bg-[#434343] p-1.5 rounded-sm ease-in duration-300" href="/about">Sobre</a>
+		</li>
+	</ul>
+	<div>
+		<button>PT</button>
+		<span>|</span>
+		<button>EN</button>
+	</div>
+</nav>
+<div class="divider border-b-2 border-[#929292]">
+	
 </div>
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
+<slot />
+<style lang="postcss">
+	:global(html){
+		background-color: theme(colors.zinc.800);
 	}
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
+	.selected {
+		background-color: #434343;
+		color: white;
 	}
 </style>
