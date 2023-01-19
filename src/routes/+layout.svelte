@@ -15,7 +15,7 @@
 			<a class=" hover:bg-[#434343] p-1.5 rounded-sm ease-in duration-300 {$page.url.pathname == '/projects' ? 'selected' : ''}  " href="/projects">Projetos</a>
 		</li>
 		<li>
-			<a class="{$page.url.pathname == '/about' ? 'active:bg-[#434343]' : ''} hover:bg-[#434343] p-1.5 rounded-sm ease-in duration-300" href="/about">Sobre</a>
+			<a class="hover:bg-[#434343] p-1.5 rounded-sm ease-in duration-300 {$page.url.pathname == '/about' ? 'selected' : ''} " href="/about">Sobre</a>
 		</li>
 	</ul>
 	<div>
