@@ -1,6 +1,16 @@
 <script>
 	import { page } from '$app/stores'
+	import { t, locale, locales } from "../i18n";
 	import "../app.css"
+	$:console.log(locales)
+	function setLocale(){
+		locale.set('en')
+		console.log(locale)
+	}
+	function setLocalePT(){
+		locale.set('ptBR')
+		console.log(locale)
+	}
 </script>
 
 <nav class="flex justify-between max-w-7xl my-0 mx-auto py-4 text-white px-4 ">
@@ -19,9 +29,10 @@
 		</li>
 	</ul>
 	<div>
-		<button>PT</button>
+		<button on:click={setLocalePT}>PT</button>
 		<span>|</span>
-		<button>EN</button>
+		<!-- salvar essa info no localstorage -->
+		<button on:click={setLocale}>EN</button>
 	</div>
 </nav>
 <div class="divider border-b-2 border-[#929292]">
