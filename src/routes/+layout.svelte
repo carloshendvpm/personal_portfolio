@@ -2,7 +2,9 @@
 	import { page } from '$app/stores'
 	import { t, locale, locales } from "../i18n";
 	import "../app.css"
+
 	$:console.log(locales)
+	
 	function setLocale(){
 		locale.set('en')
 		console.log(locale)
