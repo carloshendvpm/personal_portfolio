@@ -19,6 +19,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-netlify": "^2.0.3",
 		"svelte-i18n": "^3.6.0"
 	}
 }
