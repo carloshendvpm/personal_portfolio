@@ -1,6 +1,5 @@
 <script>
 	import { t, locale, locales } from "../i18n";
-	$:console.log(l)
 </script>
 
 <svelte:head>
@@ -25,10 +24,10 @@
 	</div>
 	<div class="flex item-start justify-between w-full mt-8">
 		<ul class="flex flex-row gap-9">
-			<li><a href=""><i class="fa fa-github" style="font-size:48px;color:white;"></i></a></li>
-			<li><a href=""><i class="fa fa-linkedin" style="font-size:48px;color:white;"></i></a></li>
-			<li><a href=""><i class="fa fa-instagram" style="font-size:48px;color:white;"></i></a></li>
-			<li><a href=""><i class="fa fa-envelope" style="font-size:48px;color:white;"></i></a></li>
+			<li><a href="https://github.com/carloshendvpm"><i class="fa fa-github" style="font-size:48px;color:white;"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/carloshenriquedvpm/"><i class="fa fa-linkedin" style="font-size:48px;color:white;"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/carloshenriquedvpm/"><i class="fa fa-instagram" style="font-size:48px;color:white;"></i></a></li>
+			<li><a href="gmail.com"><i class="fa fa-envelope" style="font-size:48px;color:white;"></i></a></li>
 		</ul>
 		<button class="bg-white rounded-md font-bold text-sm w-44 transition duration-300 ease-out hover:bg-[#5F5F5F] ease-in">{$t("homepage.button")}</button>
 	</div>
