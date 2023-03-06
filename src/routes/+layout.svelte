@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores'
-	import { locale, locales } from "../i18n";
+	import { t, locale, locales } from "../i18n";
 	import "../app.css"
 
 	$:console.log(locales)
@@ -24,10 +24,10 @@
 			<a class=" p-1.5 rounded-sm ease-in duration-300 hover:bg-[#434343] {$page.url.pathname == '/' ? 'selected' : ''} " href="/">Home</a>
 		</li>
 		<li>
-			<a class=" hover:bg-[#434343] p-1.5 rounded-sm ease-in duration-300 {$page.url.pathname == '/projects' ? 'selected' : ''}  " href="/projects">Projetos</a>
+			<a class=" hover:bg-[#434343] p-1.5 rounded-sm ease-in duration-300 {$page.url.pathname == '/projects' ? 'selected' : ''}  " href="/projects">{$t("homepage.navprojects")}</a>
 		</li>
 		<li>
-			<a class="hover:bg-[#434343] p-1.5 rounded-sm ease-in duration-300 {$page.url.pathname == '/about' ? 'selected' : ''} " href="/about">Sobre</a>
+			<a class="hover:bg-[#434343] p-1.5 rounded-sm ease-in duration-300 {$page.url.pathname == '/about' ? 'selected' : ''} " href="/about">{$t("homepage.navabout")}</a>
 		</li>
 	</ul>
 	<div>
