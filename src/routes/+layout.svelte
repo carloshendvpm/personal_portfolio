@@ -1,17 +1,13 @@
 <script>
 	import { page } from '$app/stores'
-	import { t, locale, locales } from "../i18n";
+	import { t, locale } from "../i18n";
 	import "../app.css"
-
-	$:console.log(locales)
 	
 	function setLocale(){
 		locale.set('en')
-		console.log(locale)
 	}
 	function setLocalePT(){
 		locale.set('ptBR')
-		console.log(locale)
 	}
 </script>
 
